@@ -1,0 +1,9 @@
+#pragma once
+
+#include <pro.h>
+
+#if (IDA_SDK_VERSION >= 680)
+#include "../src/ui/action_680.hpp"
+#elif (IDA_SDK_VERSION >= 660)
+#include "../src/ui/action_660.hpp"
+#endif
