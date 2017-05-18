@@ -24,9 +24,8 @@ public:
   
 private:
   logging() {
-    log_.open("c:/programs32/ruroida_log.txt");
+    log_.open("ida4humans_log.txt");
     //log_.clear();
-    log("RuroIda started");
   }
   logging(logging const&) = delete;
   void operator=(logging const&) = delete;
