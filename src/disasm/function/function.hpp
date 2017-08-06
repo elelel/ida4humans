@@ -6,6 +6,7 @@
 
 #include <algorithm>
 #include <vector>
+#include <cstdio>
 #include <stdexcept>
 
 #include "chunk.hpp"

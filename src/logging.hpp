@@ -24,8 +24,9 @@ public:
   
 private:
   logging() {
-    log_.open("ida4humans_log.txt");
+    log_.open("c:/programs32/ruroida_log.txt");
     //log_.clear();
+    log("RuroIda started");
   }
   logging(logging const&) = delete;
   void operator=(logging const&) = delete;
@@ -33,11 +34,11 @@ private:
   void log_to_stream(std::ofstream& out, const std::string& s) {
     std::time_t now = std::time(0);
     std::tm stm;
-#if defined(_MSC_VER) && (defined(WIN32) || defined(_WIN32))
+    //#if defined(_MSC_VER) && (defined(WIN32) || defined(_WIN32))
     localtime_s(&stm, &now);
-#else
-    localtime_r(&now, &stm);
-#endif
+    //#else
+    //    localtime_r(&now, &stm);
+    //#endif
     char buffer[256];
     std::strftime(buffer, 256, "%Y.%m.%d %H:%M:%S", &stm);
     out << buffer << " ";
